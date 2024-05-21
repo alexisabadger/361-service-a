@@ -25,11 +25,28 @@ Hello, world! This is a simple Spring Boot web API that converts values between
 7. To run the project, type:
         mvn spring-boot:run
 8. To test the project, open a web browser and navigate to:
-    http://localhost:808s0/api/convert/weight?value=100&fromUnit=pounds&toUnit=kilograms
+    http://localhost:8080/api/convert/weight?value=100&fromUnit=pounds&toUnit=kilograms
 
 
 
 
+
+
+# UML Diagram
+
+
+
+                    +-------------------------------------+
+                    |          api-conversion             |
+                    +-------------------------------------+
+                    | - baseUrl: string                   |
+                    +-------------------------------------+
+                    | + convertWeight(                    |
+                    |        value: double,               |
+                    |        fromUnit: String,            |
+                    |        toUnit: String               |
+                    |        ): ResponseEntity<Double>    |
+                    +-------------------------------------+
 
 
 
